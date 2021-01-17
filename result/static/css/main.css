@@ -1,0 +1,238 @@
+:root {
+  --title-font: Draconis;
+  --header-font: Dungeon;
+  --headline-font: NeoplantaBG;
+  --body-font: CrimsonText;
+
+  --page-color-d: #a5a2a0;
+  --page-color: #ccc9c6;
+  --page-color-l: #d6d1cc;
+  --page-color-ll: #e5e0da;
+
+  --cover-image: url(../img/cover.png);
+  --separator-image: url(../img/separator.png);
+}
+
+@font-face {
+  font-family: Dungeon;
+  src: url(../fonts/Dungeon.woff) format('woff');
+}
+
+@font-face {
+  font-family: Draconis;
+  src: url(../fonts/Draconis.woff) format('woff');
+}
+
+@font-face {
+  font-family: NeoplantaBG;
+  src: url(../fonts/NeoplantaBG.woff) format('woff');
+}
+
+@font-face {
+  font-family: CrimsonText;
+  src: url(../fonts/CrimsonText.woff) format('woff');
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--page-color);
+}
+
+h1 {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headline-font);
+}
+
+.front-page {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+
+  z-index: -2;
+  overflow-x: hidden;
+}
+
+.front-page::after {
+  content: ' ';
+  width: 100%;
+
+  min-height: 600px;
+  height: 100vh;
+  max-height: 1050px;
+
+  top: 0px;
+  left: 0px;
+
+  z-index: -1;
+
+  position: absolute;
+  background-image: var(--cover-image);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.25) blur(5px);
+}
+
+.front-page__foreground {
+  display: grid;
+  align-self: center;
+
+  min-height: 600px;
+  height: 100vh;
+  max-height: 1050px;
+
+  width: 650px;
+  padding: 0px 50px;
+  grid-template-columns: minmax(500px, 1fr);
+  grid-template-rows: max-content auto max-content;
+  grid-template-areas:
+    '     title     '
+    '       .       '
+    '  description  ';
+
+  text-align: center;
+  background-color: #000;
+  background-image: var(--cover-image);
+  background-position: center;
+}
+
+.front-page__title {
+  font-family: var(--title-font);
+  grid-area: title;
+  font-size: 2.75rem;
+  margin-top: 60px;
+  letter-spacing: 2.5px;
+
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, 2px 3px 0 #000;
+}
+
+.front-page__subtitle {
+  position: relative;
+  top: -15px;
+  font-size: 2em;
+}
+
+.front-page__description {
+  font-size: 1.25em;
+  font-weight: bold;
+  grid-area: description;
+
+  margin-bottom: 25px;
+
+  color: white;
+  text-shadow: -1px -1px 0 #000, -1px 0px 0 #000, -1px 1px 0 #000,
+    0px -1px 0 #000, 0px 1px 0 #000, 1px -1px 0 #000, 1px 0px 0 #000,
+    1px 1px 0 #000;
+}
+
+.adventure {
+  min-height: 100vh;
+  background-color: var(--page-color);
+
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adventure__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 315px;
+  width: 100%;
+  max-width: 1050px;
+
+  background-color: var(--page-color-l);
+}
+
+.adventure__section+.adventure__section {
+    border-top: 1px solid var(--page-color-d);
+}
+
+.adventure__section-body_one_column {
+    width: 100%;
+}
+
+.adventure__section-body_two-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.adventure__section-column {
+  min-width: 300px;
+  flex: 1;
+  max-width: 750px;
+
+  padding: 0px 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.adventure__section-column_text {
+    padding-bottom: 25px;
+}
+
+.adventure__image-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.adventure__image-link {
+    padding: 7.5px;
+    line-height: 0px;
+}
+
+.adventure__image-link_small {
+    width: calc(100%/3 - 15px);
+}
+
+.adventure__image-link_medium {
+    width: calc(50% - 15px);
+}
+
+.adventure__image-link_big {
+    width: 100%;
+}
+
+.adventure__image-link > img {
+    width: 100%;
+}
+
+.adventure__section-column_image {
+  background-image: var(--separator-image), var(--cover-image);
+  background-size: 150px, cover;
+  background-repeat: repeat-y;
+  background-position: left, center 50%;
+}
+
+.adventure__text-box {
+  background-color: var(--page-color-ll);
+  min-height: 100px;
+
+  margin: 10px 10px;
+
+  padding: 5px 25px 15px 25px;
+  box-sizing: content-box;
+}

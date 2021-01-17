@@ -1,0 +1,74 @@
+body > main {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: min-content;
+  justify-items: center;
+  align-content: center;
+  row-gap: 50px;
+}
+
+.simple-card,
+.action-card {
+  display: grid;
+  grid-template-columns: 100px auto;
+  column-gap: 25px;
+
+  text-align: justify;
+}
+
+.simple-card {
+  grid-template-areas:
+    'image title'
+    'image description';
+}
+
+.action-card {
+  grid-template-areas:
+    'image title'
+    'image description'
+    'actions actions';
+}
+
+.simple-card > img,
+.action-card > img {
+  grid-area: image;
+
+  width: 100%;
+  align-self: center;
+}
+
+.action-card > .actions {
+  grid-area: actions;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.action-card > .actions > a {
+  margin: 15px 10px 0px 0px;
+}
+
+#page-description {
+  align-self: center;
+  max-width: 800px;
+
+  margin-top: 20px;
+}
+
+.pancakes {
+  margin: 20px 0px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.pancake {
+  flex: 0 350px;
+  padding: 20px;
+
+  max-width: 600px;
+}
