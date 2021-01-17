@@ -1,0 +1,47 @@
+main {
+    display: grid;
+    place-content: center;
+}
+
+.dialog {
+    background-color: var(--background-color-l);
+    padding: 20px;
+}
+
+.dialog > input {
+    padding: 5px 0px;
+    font-size: .9rem;
+}
+
+.dialog_login {
+    display: grid;
+
+    grid-template-columns: min-content 250px;
+    grid-template-rows: auto auto auto 10px auto;
+
+    row-gap: 25px;
+    column-gap: 10px;
+
+    grid-template-areas: 
+        "title   title"
+        "image   image"
+        ".       user-input"
+        ".       password-input"
+        ".       ."
+        "submit  submit";
+}
+
+.dialog__title {
+    grid-area: title;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.dialog__label {
+    place-self: center right;
+}
+
+.dialog__submit {
+    grid-area: submit;
+    margin-bottom: 15px;
+}
