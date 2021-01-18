@@ -3,7 +3,7 @@ main {
     place-content: center;
 }
 
-.login {
+.signup {
     background-color: var(--background-color-l);
     padding: 35px;
 
@@ -19,42 +19,43 @@ main {
     grid-template-areas: 
         "title   title"
         ".       user-input"
-        ".       password-input"
+        ".       email-input"
+        ".       password1-input"
+        ".       password2-input"
         "image   image"
         "submit  submit"
-        "signup  signup";
+        "login   login";
 }
 
-.login > img {
+.signup > img {
     grid-area: image;
     width: 100px;
-
-    margin-top: 25px;
 
     place-self: center;
 }
 
-.login__tall-input {
+.signup__tall-input {
     padding: 2.5px;
 }
 
-.login__title {
+.signup__title {
     grid-area: title;
     text-align: center;
     padding-bottom: 25px;
 }
 
-.login__label {
+.signup__label {
     place-self: center right;
+    text-align: right;
 }
 
-.login__submit {
+.signup__submit {
     grid-area: submit;
     border-style: none;
 }
 
-.login__signup-link {
-    grid-area: signup;
+.signup__login-link {
+    grid-area: login;
     place-self: center end;
     font-size: small;
 }

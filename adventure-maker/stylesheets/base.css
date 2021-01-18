@@ -66,7 +66,7 @@ body {
   color: var(--text-color-l);
 }
 
-body > header {
+header {
   grid-area: header;
 
   background-color: var(--background-color-l);
@@ -142,12 +142,12 @@ body > header {
   background-color: var(--secondary-color-l);
 }
 
-body > main {
+main {
   grid-area: main;
   background-color: var(--background-color);
 }
 
-body > footer {
+footer {
   grid-area: footer;
 
   background-color: var(--background-color-d);
@@ -156,6 +156,10 @@ body > footer {
   place-content: center;
 }
 
-body > footer a {
+a {
   color: inherit;
+}
+
+input {
+  font-size: medium;
 }
