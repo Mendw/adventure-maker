@@ -7,6 +7,7 @@
     <title>Adventure Maker</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/base.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/auth.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/login.css'>
     <link rel='icon' type="image/svg+xml" href="favicon.ico" />
 
@@ -17,21 +18,22 @@
 <body>
     <footer><div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div></footer>
     <main>
-        <form class="login">
-            <h2 class="login__title">Login</h2>
+        <form class="auth" action="./account.html">
+            <h2 									class="auth__title">Log in</h2>
             
-            <img   src="./images/fairytale/044-crystal ball.svg">
+            <img                                    class="auth__image" src="./images/fairytale/044-crystal ball.svg">
             
-            <label                              class="login__label">Username</label>
-            <input type="text"                  class="login__tall-input">
+            <label                                	class="auth__label">Username</label>
+            <input type="text" spellcheck="false" 	class="auth__input auth__input_tall ">
             
-            <label                              class="login__label">Password</label>
-            <input type="password"              class="login__tall-input">
+            <label                                	class="auth__label">Password</label>
+            <input type="password"                	class="auth__input auth__input_tall ">
             
-            <input type="submit" value="Log In" class="login__submit button secondary">
-            <a     href="./signup.html"         class="login__signup-link">Don't have an account? Sign up</a>
+            <input type="submit" value="Log In"   	class="auth__submit button button_big button_primary">
+            <a     href="./signup.html"           	class="auth__alt-link">Don't have an account? Sign up</a>
         </form>
     </main>
+    
     <header>
         <a class="page-logo" href="./index.html">Adventure Maker</a>
         <div class="links">
