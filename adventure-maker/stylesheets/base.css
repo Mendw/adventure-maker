@@ -56,7 +56,7 @@ html {
 body {
     background-color: var(--mate-color-25);
 
-    width: 100%;
+    min-width: 100%;
     min-height: 100vh;
     display: grid;
 
@@ -65,6 +65,8 @@ body {
         "header"
         "main"
         "footer";
+
+    color: var(--mate-color-900);
 }
 
 header {
@@ -73,7 +75,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px;
+    padding: 0px 25px;
 }
 
 main {
@@ -137,8 +139,14 @@ h1, h2, h3 {
     align-self: end;
 }
 
+.card__title_nowrap {
+    white-space: nowrap;
+}
+
 .card__description {
     grid-area: description;
+    
+    text-align: justify;
 }
 
 .card__actions {
@@ -158,6 +166,7 @@ h1, h2, h3 {
 }
 
 .auth {
+    padding-left: 10px;
     display: grid;
     column-gap: 10px;
 
@@ -165,11 +174,12 @@ h1, h2, h3 {
 }
 
 .button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     box-shadow: var(--button-shadow);
 
     border-radius: 5px;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .button_transparent {

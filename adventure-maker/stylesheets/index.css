@@ -8,6 +8,7 @@ main {
     flex-flow: row wrap;
 
     justify-content: center;
+    align-items: flex-start;
 }
 
 .about-adventure-maker > .card {
