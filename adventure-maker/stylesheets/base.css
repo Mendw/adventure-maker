@@ -1,178 +1,186 @@
 :root {
-  --header-height: 50px;
+    --primary-color-100: #83a5b0;
+    --primary-color-200: #6a93a0;
+    --primary-color-300: #528190;
+    --primary-color-400: #396f80;
+    --primary-color-500: #205d70;
+    --primary-color-600: #084c61;
+    --primary-color-700: #074457;
+    --primary-color-800: #063c4d;
+    --primary-color-900: #053543;
 
-  --primary-color-ll: #95C1D6;  
-  --primary-color-l: #4987A5;
-  --primary-color: #256D90;
-  --primary-color-d: #0D4F6F;
-  --primary-color-dd: #023046;
+    --secondary-color-100:#ffde9a;
+    --secondary-color-200:#ffd889;
+    --secondary-color-300:#ffd378;
+    --secondary-color-400:#ffcd67;
+    --secondary-color-500:#ffc857;
+    --secondary-color-600:#e5b44e;
+    --secondary-color-700:#cca045;
+    --secondary-color-800:#b28c3c;
+    --secondary-color-900:#997834;
 
-  --secondary-color-ll: #FFD7AE;
-  --secondary-color-l: #FFB66A;
-  --secondary-color: #E38D31;
-  --secondary-color-d: #AF600D;
-  --secondary-color-dd: #6E3800;
+    --accent-color-100:#e98885;
+    --accent-color-200:#e57570;
+    --accent-color-300:#e2615c;
+    --accent-color-400:#de4d48;
+    --accent-color-500:#db3a34;
+    --accent-color-600:#c5342e;
+    --accent-color-700:#af2e29;
+    --accent-color-800:#992824;
+    --accent-color-900:#83221f;
 
-  --accent-color-ll: #FFC5AE;
-  --accent-color-l: #FF946A;
-  --accent-color: #E36431;
-  --accent-color-d: #AF3B0D;
-  --accent-color-dd: #6E1F00;
+    --mate-color-00: #ffffff;
+    --mate-color-25: #d6d5d5;
+    --mate-color-50: #adacac;
+    --mate-color-100:#848283;
+    --mate-color-200:#6f6e6e;
+    --mate-color-300:#5a595a;
+    --mate-color-400:#464445;
+    --mate-color-500:#323031;
+    --mate-color-600:#2d2b2c;
+    --mate-color-700:#282627;
+    --mate-color-800:#232122;
+    --mate-color-900:#1e1c1d;
 
-  --background-color-ll: #667784;
-  --background-color-l: #394752;
-  --background-color: #1A2731;
-  --background-color-d: #0B1822;
-  --background-color-dd: #01080E;
-
-  --text-color-ll: #E0DFDF;
-  --text-color-l: #AFAFAF;
-  --text-color-d: #525252;
-  --text-color-dd: #100F0F; 
+    --button-shadow: 0px 4px 4px #00000025;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
 
 html {
-  height: 100%;
-}
-
-html, body {
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
+    width: 100vw;
+    
+    overflow-x: hidden;
+    font-family: 'Asap', sans-serif;
 }
 
 body {
-  margin: 0;  
-  min-height: 100%;
+    background-color: var(--mate-color-25);
 
-  display: grid;
-  grid-template-rows: var(--header-height) minmax(min-content, 1fr) var(--header-height) ;
-  grid-template-columns: minmax(600px, 1fr);
-  grid-template-areas:
-    'header'
-    'main'
-    'footer';
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
 
-  font-family: 'Asap', sans-serif;
-  font-weight: 400;
-
-  color: var(--text-color-l);
+    grid-template-rows: auto minmax(min-content, 1fr) auto;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
 }
 
 header {
-  grid-area: header;
+    grid-area: header;
 
-  background-color: var(--background-color-l);
-
-  position: sticky;
-  top: 0px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  box-shadow: 0px 3px #00000033;
-}
-
-.page-logo {
-  flex: 0 0 150px;
-
-  --height: calc(var(--header-height) - 10px);
-  height: var(--height);
-  line-height: var(--height);
-  vertical-align: middle;
-
-  margin-right: 20px;
-
-  padding-left: 40px;
-  color: var(--text-color-l);
-  text-align: center;
-
-  border-right: 1px solid var(--text-color-l);
-}
-
-.links {
-  flex: 1;
-
-  display: grid;
-  grid-auto-columns: max-content;
-  grid-auto-flow: column;
-
-  place-content: center end;
-  align-items: center;
-
-  column-gap: 20px;
-
-  padding-right: 60px;
-}
-
-.button {
-  padding: 8px 15px;
-
-  transition: background-color 0.1s;  
-  border-radius: 3px;
-  color: var(--text-color-ll);
-
-  outline-style: none;
-  
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.button_raised {
-  box-shadow: 0px 3px 5px #00000088;
-  background-color: transparent;
-}
-
-.button_primary {
-  background-color: var(--primary-color);
-}
-
-.button_primary:hover {
-  background-color: var(--primary-color-l);
-}
-
-.button_secondary {
-  background-color: var(--secondary-color);
-  color: var(--text-color-dd);
-}
-
-.button_secondary:hover {
-  background-color: var(--secondary-color-l);
-}
-
-.button_big {
-  padding: 10px 15px;
-  font-size: 1.1rem;
-  font-weight: bolder;
-
-  border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
 }
 
 main {
-  grid-area: main;
-  background-color: var(--background-color);
+    grid-area: main;
 }
 
 footer {
-  grid-area: footer;
+    grid-area: footer;
 
-  background-color: var(--background-color-d);
-  color: var(--background-color-l);
-  display: grid;
-  place-content: center;
+    padding: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  color: inherit;
+    color: inherit;
 }
 
-input {
-  font-size: medium;
+h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+}
+
+.card {
+    margin: 10px;
+    padding: 2px 10px 2px 5px;
+    text-decoration: none;
+
+    display: grid;
+    grid-template-columns: 100px auto;
+
+    column-gap: 15px;
+
+    grid-template-areas: 
+        "image title"
+        "image description";
+}
+
+.card_with-actions {
+    grid-template-areas:
+    'image title'
+    'image description'
+    'actions actions';
+}
+
+.card__image {
+    grid-area: image;
+
+    width: 100%;
+}
+
+.card__title {
+    grid-area: title;
+
+    align-self: end;
+}
+
+.card__description {
+    grid-area: description;
+}
+
+.card__actions {
+    grid-area: actions;
+
+    display: grid;
+    grid-auto-flow: column;
+
+    place-content: center start;
+    column-gap: 10px;
+
+    padding: 10px;
+}
+
+.ko-fi {
+    height: fit-content;
+}
+
+.auth {
+    display: grid;
+    column-gap: 10px;
+
+    grid-auto-flow: column;
+}
+
+.button {
+    padding: 10px 15px;
+    box-shadow: var(--button-shadow);
+
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button_transparent {
+    border: 1px solid var(--mate-color-50);
+}
+
+.button_primary {
+    background-color: var(--primary-color-500);
+    color: var(--mate-color-00);
+}
+
+.button_secondary {
+    background-color: var(--secondary-color-500);
 }
