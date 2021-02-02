@@ -10,8 +10,3 @@ main {
     justify-content: center;
     align-items: flex-start;
 }
-
-.about-adventure-maker > .card {
-    flex: 0 350px;
-    padding: 20px;
-}

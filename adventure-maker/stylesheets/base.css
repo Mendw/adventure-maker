@@ -51,6 +51,7 @@ html {
     
     overflow-x: hidden;
     font-family: 'Asap', sans-serif;
+    font-size: 12px;
 }
 
 body {
@@ -73,9 +74,10 @@ header {
     grid-area: header;
 
     display: flex;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
-    padding: 0px 25px;
+    padding: 0px 10px;
 }
 
 main {
@@ -111,7 +113,7 @@ h1, h2, h3 {
     text-decoration: none;
 
     display: grid;
-    grid-template-columns: 100px auto;
+    grid-template-columns: 50px auto;
 
     column-gap: 15px;
 
@@ -125,6 +127,13 @@ h1, h2, h3 {
     'image title'
     'image description'
     'actions actions';
+}
+
+.card_in-flex {
+    flex: 1 0 250px;
+
+    max-width: 450px;
+    padding: 20px;
 }
 
 .card__image {
@@ -163,10 +172,10 @@ h1, h2, h3 {
 
 .ko-fi {
     height: fit-content;
+    padding: 10px 0px;
 }
 
 .auth {
-    padding-left: 10px;
     display: grid;
     column-gap: 10px;
 
@@ -174,7 +183,7 @@ h1, h2, h3 {
 }
 
 .button {
-    padding: 10px 20px;
+    padding: 10px 15px;
     box-shadow: var(--button-shadow);
 
     border-radius: 5px;
@@ -193,4 +202,58 @@ h1, h2, h3 {
 
 .button_secondary {
     background-color: var(--secondary-color-500);
+}
+
+a.kofi-button.kofi-button {
+    font-size: inherit !important;
+    line-height: unset !important;
+
+    font-family: 'Asap', sans-serif !important;
+    font-weight: normal !important;
+
+    box-shadow: var(--button-shadow);
+}
+
+@media screen and (min-width: 375px) {
+    html {
+        font-size: 14px;
+    }
+    header {
+        justify-content: space-around;
+    }
+    .auth {
+        padding-left: 10px;
+    }
+    .card {
+        grid-template-columns: 75px auto;
+    }
+}
+
+@media screen and (min-width: 425px) {
+    html {
+        font-size: 16px;
+    }
+
+    .card {
+        grid-template-columns: 100px auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card_in-flex {
+        flex: 1 0 350px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding-top: 25px;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    header {
+        padding-top: 50px;
+    }
 }
