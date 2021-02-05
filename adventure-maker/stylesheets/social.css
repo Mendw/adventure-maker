@@ -37,6 +37,7 @@
 }
 
 .social-buttons__button__image {
+    height: 40px;
     width: 40px;
     padding-right: 10px;
 }
