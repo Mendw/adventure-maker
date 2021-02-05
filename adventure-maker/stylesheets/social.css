@@ -1,0 +1,42 @@
+:root {
+    --discord-color: #7289DA;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10px;
+}
+
+.social-buttons__button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+    text-decoration: none;
+
+    max-width: 300px;
+
+    padding: 10px 0px;
+    margin: 5px;
+
+    box-sizing: border-box;
+    box-shadow: var(--button-shadow);
+}
+
+.social-buttons__button_google {
+    background-color: var(--mate-color-00);
+}
+
+.social-buttons__button_discord {
+    background-color: var(--discord-color);
+    color: var(--mate-color-00);
+}
+
+.social-buttons__button__image {
+    width: 40px;
+    padding-right: 10px;
+}

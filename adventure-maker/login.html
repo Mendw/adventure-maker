@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Index - Adventure Maker</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='icon' type="image/svg+xml" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Fraunces:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/base.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/auth.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/social.css'>
+</head>
+
+<body>
+    <header>
+        <a class="card" href="./index.html">
+            <img src="images/fairytale/003-dwarf.svg" class="card__image">
+            <h1 class="card__title card__title_nowrap">Adventure Maker</h1>
+            <p class="card__description">Make neat and organized RPG campaigns</p>
+        </a>
+        <div class="ko-fi">
+            <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+            <script
+                type='text/javascript'>kofiwidget2.init('Buy me a Ko-fi !', '#205d70', 'J3J72SEC9'); kofiwidget2.draw();</script>
+        </div>
+    </header>
+    <main>
+        <form class="auth" action="./account.html" method="GET">
+            <h2 class="auth__title">Log in</h2>
+            <div class="social-buttons">
+                <a href="#" class="social-buttons__button social-buttons__button_google">
+                    <img class="social-buttons__button__image" src="images/social/search.svg">
+                    <span>Log in with Google</span>
+                </a>
+                <a href="#" class="social-buttons__button social-buttons__button_discord">
+                    <img class="social-buttons__button__image" src="images/social/discord.svg">
+                    <span>Log in with Discord</span>
+                </a>
+            </div>
+            
+            <label class="auth__label" for="li-username">Username</label>
+            <input class="auth__input" type="text" id="li-username" name="username">
+            
+            <label class="auth__label" for="li-password">Password</label>
+            <input class="auth__input" type="password" id="li-password" name="password">
+            
+            <a class="auth__alt-link" href="./signup.html">Don't have an account? Sign up</a>
+            <input type="submit" value="Log In" class="auth__submit button button_big button_primary">
+        </form>
+    </main>
+    <footer>
+        <div class="freepik">
+            Icons made by
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+    </footer>
+    <script src="js/forms.js"></script>
+</body>
+
+</html>

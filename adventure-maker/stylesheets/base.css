@@ -175,9 +175,11 @@ h1, h2, h3 {
     padding: 10px 0px;
 }
 
-.auth {
+.to-account {
     display: grid;
     column-gap: 10px;
+
+    align-items: center;
 
     padding: 0px 10px;
 
@@ -204,6 +206,19 @@ h1, h2, h3 {
 
 .button_secondary {
     background-color: var(--secondary-color-500);
+}
+
+.button_accent {
+    background-color: var(--accent-color-500);
+    color: var(--mate-color-00);
+}
+
+.button_accent-light {
+    background-color: var(--accent-color-200);
+}
+
+.button_big {
+    height: 50px;
 }
 
 a.kofi-button.kofi-button {
@@ -240,6 +255,6 @@ a.kofi-button.kofi-button {
 
 @media screen and (min-width: 768px) {
     .card_in-flex {
-        flex: 1 0 350px;
+        flex: 1 0 300px;
     }
-}
+}    
