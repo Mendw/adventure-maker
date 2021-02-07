@@ -53,12 +53,38 @@ main {
 }
 
 .auth__alt-link {
-    text-align: right;
-    padding: 20px 5px 10px 0px;
+    align-self: flex-end;
+
+    padding: 10px 0px 5px 25px;
+    margin: 10px 0px 5px 0px;
 }
 
 .auth__submit {
 
     border: none;
     font-weight: bold;
+}
+
+.auth__elaborate-separator {
+    height: 10px;
+    display: flex;
+
+    flex-direction: row;
+    margin: 7.5px 20px 0px 20px;
+}
+
+.auth__elaborate-separator__line {
+    flex: 3;
+    height: 5px;
+    border-bottom: 1px solid var(--mate-color-50);
+}
+
+.auth__elaborate-separator__circle {
+    width: 10px;
+    height: 10px;
+
+    margin: 0px 5px;
+
+    border: 1px solid var(--mate-color-50);
+    border-radius: 10px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,10 +8,12 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='icon' type="image/svg+xml" href="favicon.ico" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Fraunces:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Fraunces:wght@300&display=swap"
+        rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/base.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/account.css'>-
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/account.css'>
 </head>
+
 <body>
     <header>
         <a class="card" href="./index.html">
@@ -19,7 +22,9 @@
             <p class="card__description">Make neat and organized RPG campaigns</p>
         </a>
         <div class="ko-fi">
-            <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy me a Ko-fi !', '#205d70', 'J3J72SEC9');kofiwidget2.draw();</script> 
+            <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+            <script
+                type='text/javascript'>kofiwidget2.init('Buy me a Ko-fi !', '#205d70', 'J3J72SEC9'); kofiwidget2.draw();</script>
         </div>
         <div class="to-account">
             <a href="./account.html">Username</a>
@@ -27,18 +32,24 @@
         </div>
     </header>
     <main>
-        <section class="adventures">
-            <h2 class="adventures__title">Adventures</h2>
-            <div class="adventures__container">
-                <div class="adventure"></div>
-                <div class="adventure"></div>
-                <div class="adventure"></div>
-                <div class="adventure"></div>
-                <div class="adventure"></div>
-            </div>
-        </section>
-        <div class="profile">
-            <h2 class="profile__title">Profile</h2>
+        <div class="adventures">
+                <h2 class="adventures__title">Adventures</h2>
+                <div class="adventures__container">
+                    <a class="adventure" href="#">
+                        <div class="adventure__cover" style="background-image: url('./images/cover.jpg');">
+                        </div>
+                        <h3 class="adventure__message">
+                            The Grave of the Happy Knight
+                        </h3>
+                    </a>
+                    <a href="./create.html" class="adventure adventure_empty">
+                        <div class="adventure__cover">
+                            <p class="adventure__message">
+                                Click to create an adventure
+                            </p>
+                        </div>
+                    </a>
+                </div>
         </div>
     </main>
     <footer>
@@ -50,4 +61,5 @@
         </div>
     </footer>
 </body>
+
 </html>

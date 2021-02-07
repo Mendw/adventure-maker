@@ -1,11 +1,13 @@
 main {
     display: flex;
-    flex-flow: row wrap-reverse;
-    justify-content: flex-end;
+    flex-direction: row;
+
+    justify-content: center;
 }
 
 .adventures {
-    flex: 1 0 200px;
+    flex: 0 1 1250px;
+
     display: grid;
     grid-template-rows: min-content 1fr;
 
@@ -14,10 +16,11 @@ main {
 
 .adventures__title {
     text-align: center;
+    font-size: 2rem;
 }
 
 .adventures__container {
-    padding-top: 20px;
+    padding: 50px 0px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
     place-content: start center;
@@ -33,6 +36,9 @@ main {
     padding-right: 35px;
 
     min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .profile__title {
@@ -41,13 +47,28 @@ main {
 
 .adventure {
     width: 200px;
-    height: 300px;
-
-    background-color: black;
+    text-decoration: none;
 }
 
-@media screen and (min-width: 550px) {
-    .adventures {  
-        flex: 3 0 500px;
-    }
+.adventure__cover {
+    height: 280px;
+    background-position: center;
+
+    background-size: cover;
+}
+
+.adventure_empty .adventure__cover {
+    border: 1px dashed var(--mate-color-50);
+
+    display: grid;
+    place-content: center;
+}
+
+.adventure__message {
+    padding-top: 5px;
+    text-align: center;
+}
+
+.adventure_empty .adventure__message {
+    color: var(--mate-color-200);
 }
